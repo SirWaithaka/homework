@@ -20,18 +20,35 @@
     }
 
     const searchBtn = document.getElementById('search-btn')
+    const list = document.getElementById('restaurants')
 
     searchBtn.addEventListener('click', function () {
         // get search value
 
         const value = document.getElementById('search-str').value
         if (value === '') {
+            restaurants.forEach(r => {
+                let html = `
+                <div class=" shadow h-72 p-4 rounded">
+                    <h1 class="text-xl font-bold text-yellow-500">${r.name}</h1>
+                    <div class="leading-8 text-1xl w-72">
+                        <p>Address: ${r.address}</p>
+                        <p>contact: ${r.contact}</p>
+                        <p>rating: ${r.rating}</p>
+                        <div class="bg-green-500 w-32 mt-8 text-center text-white text-2xlg rounded ">
+                            <button>Read More</button>
+                        </div>
+                    </div>
+                </div>
+                `
+                list.innerHTML += html
+            
+              })
             return
         }
 
         const result = searchRestaurantsByName(restaurants, value)
 
-        const list = document.getElementById('restaurants')
         list.innerHTML = ''
 
         result.forEach(r => {

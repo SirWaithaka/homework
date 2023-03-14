@@ -1,3 +1,4 @@
+(() => {
 // Define the list of restaurants
 const restaurants = [
     {
@@ -60,3 +61,4 @@ const restaurants = [
 
 // Store the list of restaurants in localStorage
 localStorage.setItem('restaurants', JSON.stringify(restaurants));
+})()
