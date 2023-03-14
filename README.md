@@ -1,6 +1,9 @@
 # Restaurant Finder App
 Use to find a restaurant
 
+## Screenshot
+![Screen shot of app](https://github.com/SirWaithaka/homework/blob/primary/screenshot.png)
+
 
 ## Setup
 The appliation uses Nodejs. Make sure to have that installed.
